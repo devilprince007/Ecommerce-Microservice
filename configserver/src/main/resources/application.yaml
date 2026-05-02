@@ -2,8 +2,15 @@ spring:
   application:
     name: configserver
 
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///D:\PreprationCodes\SpringBootMicroservices\Microservices\Ecommerce-Microservice\configserver\src\main\resources\config
+
 server:
   port: 8888
+
 # configuration to connect to git hub
 #  cloud:
 #    config:
