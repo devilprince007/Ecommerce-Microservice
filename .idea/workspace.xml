@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="353d2092-699d-43c2-9551-f935a869c8c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/ecommerce/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +46,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.OrderApplication.executor": "Run",
-    "Spring Boot.ProductApplication.executor": "Run",
-    "Spring Boot.UserApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/PreprationCodes/SpringBootMicroservices/Microservices/Ecommerce-Microservice"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.OrderApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PreprationCodes/SpringBootMicroservices/Microservices/Ecommerce-Microservice&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PreprationCodes\SpringBootMicroservices\Microservices\Ecommerce-Microservice" />
