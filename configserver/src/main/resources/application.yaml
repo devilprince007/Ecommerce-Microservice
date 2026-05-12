@@ -7,15 +7,15 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    username: yash
-    password: yash
+    username: guest
+    password: guest
 
   cloud:
     config:
       server:
         native:
           search-locations: file:///D:\PreprationCodes\SpringBootMicroservices\Microservices\Ecommerce-Microservice\configserver\src\main\resources\config
-
+#          search-locations: classpath:/config
 management:
   endpoints:
     web:

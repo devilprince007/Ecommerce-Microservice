@@ -23,6 +23,10 @@ public class ProductService {
         return mapToProductResponse(savedProduct);
     }
 
+    public Optional<ProductResponse> getProductByID(Long id) {
+       return productRepository.findByIdAndActiveTrue(id).map(this::mapToProductResponse);
+    }
+
 
     public Optional<ProductResponse> updateProduct(Long id, ProductRequest productRequest) {
         return productRepository.findById(id).map(existingProduct -> {

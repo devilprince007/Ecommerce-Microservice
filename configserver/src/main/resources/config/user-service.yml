@@ -1,0 +1,52 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+      database: userdb
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0
+
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/userdb
+#    username: yash
+#    password: yash
+#  jpa:
+#    database: POSTGRESQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+Logging:
+#  level:
+#    root: INFO
+#    com.ecommerce.user: TRACE
+  file:
+    name: logs/userServiceLogs/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 7

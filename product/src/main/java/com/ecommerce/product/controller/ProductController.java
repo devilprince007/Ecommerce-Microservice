@@ -4,6 +4,7 @@ import com.ecommerce.product.dto.ProductRequest;
 import com.ecommerce.product.dto.ProductResponse;
 import com.ecommerce.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,9 @@ import java.util.List;
 @RequestMapping("/api/products")
 public class ProductController {
 
+    @Value("${server.port}")
+    private String port;
+
     private final ProductService productService;
 
     @PostMapping
@@ -25,6 +29,14 @@ public class ProductController {
     @PutMapping("/{id}")
     public ResponseEntity<ProductResponse> updateProduct(@PathVariable Long id,  @RequestBody ProductRequest productRequest) {
         return productService.updateProduct(id, productRequest).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ProductResponse> getProductByID(@PathVariable Long id) {
+        System.out.println("Request received at instance running on port: "+port);
+        return productService.getProductByID(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @GetMapping

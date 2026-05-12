@@ -12,7 +12,4 @@ public class UserResponse {
     private String phone;
     private UserRole role;
     private AddressDTO address;
-
-    public void setRole(UserRole role) {
-    }
 }
