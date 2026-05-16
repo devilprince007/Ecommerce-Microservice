@@ -1,28 +1,5 @@
-server:
-  port: 8080
-
 spring:
-  main:
-    web-application-type: reactive
-
   application:
-    name: gateway
-
-management:
-  endpoint:
-    gateway:
-      access: unrestricted
-
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  tracing:
-    sampling:
-      probability: 1.0
-
-#logging:
-#  level:
-#    root: INFO
-#    org.springframework.cloud.gateway.route.RouteDefinitionLocator: INFO
-#    org.springframework.cloud.gateway: TRACE
+    name: gateway-service
+  config:
+    import: optional:configserver:http://localhost:8888
