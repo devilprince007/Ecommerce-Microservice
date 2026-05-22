@@ -9,11 +9,21 @@ spring:
     hibernate:
       ddl-auto: create
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+  cloud:
+    bus:
+      destination: springCloudBus
+
+    stream:
+      bindings:
+        springCloudBusInput:
+          group: order-service-group
   rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+    VIRTUAL-HOST: ${RABBITMQ_VHOST:guest}
+    connection-timeout: 30000
 
 management:
   endpoints:

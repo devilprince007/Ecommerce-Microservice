@@ -75,10 +75,11 @@ public class CartService {
     }
 
     public List<CartItem> getCartItems(String userId) {
-        return cartItemRepository.findByUserId(userId);
+        List<CartItem> cartItems = cartItemRepository.findByUserId(userId);
+        return cartItems;
     }
 
     public void clearCart(String userId) {
-        cartItemRepository.findByUserId(userId);
+        cartItemRepository.deleteByUserId(userId);
     }
 }

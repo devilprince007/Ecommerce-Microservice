@@ -4,11 +4,6 @@ spring:
   profiles:
     active: native
 
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
 
   cloud:
     config:
@@ -16,6 +11,23 @@ spring:
         native:
           search-locations: file:///D:\PreprationCodes\SpringBootMicroservices\Microservices\Ecommerce-Microservice\configserver\src\main\resources\config
 #          search-locations: classpath:/config
+    bus:
+      enabled: true
+      destination: springCloudBus
+
+    stream:
+      bindings:
+        springCloudBusInput:
+          group: config-server-group
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+    VIRTUAL-HOST: ${RABBITMQ_VHOST:guest}
+    connection-timeout: 30000
+
 management:
   endpoints:
     web:

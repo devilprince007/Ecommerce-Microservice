@@ -1,3 +1,9 @@
+server:
+  port: 8083
+
+app:
+  message: "Hello Order!"
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/order
@@ -9,11 +15,44 @@ spring:
     hibernate:
       ddl-auto: create
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+
+  cloud:
+    bus:
+      destination: springCloudBus
+    stream:
+      bindings:
+        createOrder-out-0:
+          destination: order.exchange.new
+          content-type: application/json
+#          destination: order.exchange.new
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+#        springCloudBusInput:
+#          group: order-service-group
+#      rabbit:
+#        bindings:
+#          createOrder-out-0:
+#            producer:
+#              routing-key-expression: '''order.tracking.new'''
+#              routing-key-expression: '''order.tracking.new'''
+
+#  rabbitmq:
+#    host: ${RABBITMQ_HOST:localhost}
+#    port: ${RABBITMQ_PORT:5672}
+#    username: ${RABBITMQ_USERNAME:guest}
+#    password: ${RABBITMQ_PASSWORD:guest}
+#    VIRTUAL-HOST: ${RABBITMQ_VHOST:guest}
+#    connection-timeout: 30000
+
+#rabbitmq:
+#  exchange:
+#    name: order.exchange
+#  queue:
+#    name: order.queue
+#  routing:
+#    key: order.tracking
 
 management:
   endpoints:
@@ -29,12 +68,6 @@ management:
   tracing:
     sampling:
       probability: 1.0
-
-server:
-  port: 8083
-
-app:
-  message: "Hello Order!"
 
 eureka:
   client:
@@ -80,4 +113,3 @@ resilience4j:
         timeout-duration: 0
         limit-refresh-period: 4s
         limit-for-period: 2
-        
